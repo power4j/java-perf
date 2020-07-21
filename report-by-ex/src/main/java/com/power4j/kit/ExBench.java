@@ -1,4 +1,4 @@
-package com.github.jclazz;
+package com.power4j.kit;
 
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.runner.Runner;
@@ -19,37 +19,27 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.Throughput)
 @Warmup(iterations = 3)
 @Measurement(iterations = 3, time = 5)
-@Threads(16)
+@Threads(Threads.MAX)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 public class ExBench {
-    private final static int LOOPS = 1000;
-
     @Benchmark
     public void successNoThrown() {
-        for (int i = 0; i < LOOPS; i++) {
-            DemoService.successNoThrown();
-        }
+        DemoService.successNoThrown();
     }
 
     @Benchmark
     public void success() {
-        for (int i = 0; i < LOOPS; i++) {
-            DemoService.success();
-        }
+        DemoService.success();
     }
 
     @Benchmark
     public void failByCatch() {
-        for (int i = 0; i < LOOPS; i++) {
-            DemoService.failByCatch();
-        }
+        DemoService.failByCatch();
     }
 
     @Benchmark
     public void fail() {
-        for (int i = 0; i < LOOPS; i++) {
-            DemoService.fail();
-        }
+        DemoService.fail();
     }
 
     public static void main(String[] args) throws Exception {

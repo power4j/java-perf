@@ -6,7 +6,7 @@
         <artifactId>java-perf</artifactId>
         <version>1.0</version>
     </parent>
-    <artifactId>report-by-ex</artifactId>
+    <artifactId>atomic</artifactId>
     <packaging>jar</packaging>
 
 </project>

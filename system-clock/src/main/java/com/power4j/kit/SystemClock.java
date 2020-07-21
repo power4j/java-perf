@@ -1,4 +1,4 @@
-package com.github.jclazz;
+package com.power4j.kit;
 
 import java.sql.Timestamp;
 import java.util.concurrent.Executors;

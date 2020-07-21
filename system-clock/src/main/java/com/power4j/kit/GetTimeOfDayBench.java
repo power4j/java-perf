@@ -1,6 +1,7 @@
-package com.github.jclazz;
+package com.power4j.kit;
 
 import org.openjdk.jmh.annotations.*;
+import org.openjdk.jmh.infra.Blackhole;
 import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.options.Options;
 import org.openjdk.jmh.runner.options.OptionsBuilder;
@@ -21,22 +22,18 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.Throughput)
 @Warmup(iterations = 3)
 @Measurement(iterations = 3, time = 5)
-@Threads(16)
+@Threads(Threads.MAX)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 public class GetTimeOfDayBench {
 
     @Benchmark
-    public void testCurrentTimeMillis() {
-        for (int i = 0; i < 1000; i++) {
-            long l = System.currentTimeMillis();
-        }
+    public void testCurrentTimeMillis(Blackhole bh) {
+        bh.consume(System.currentTimeMillis());
     }
 
     @Benchmark
-    public void testSystemClock() {
-        for (int i = 0; i < 1000; i++) {
-            long l = SystemClock.now();
-        }
+    public void testSystemClock(Blackhole bh) {
+        bh.consume(SystemClock.now());
     }
 
     public static void main(String[] args) throws Exception {

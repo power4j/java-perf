@@ -1,7 +1,7 @@
-package com.github.jclazz;
+package com.power4j.kit;
 
-import com.github.jclazz.utils.BizException;
-import com.github.jclazz.utils.R;
+import com.power4j.kit.utils.BizException;
+import com.power4j.kit.utils.R;
 
 /**
  * @author CJ (jclazz@outlook.com)

@@ -1,4 +1,4 @@
-package com.github.jclazz.utils;
+package com.power4j.kit.utils;
 
 /**
  * @author CJ (jclazz@outlook.com)
