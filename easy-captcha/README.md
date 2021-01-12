@@ -1,7 +1,6 @@
-## 原子自增性能比较
+## EasyCaptcha验证码性能测试
 
-性能测试用于比较`LongAdder`和`AtomicLong`在单线程和多线程环境下的性能表现。
-
+EasyCaptcha: https://github.com/whvcse/EasyCaptcha
 
 
 ### 测试结果
