@@ -40,6 +40,7 @@
         <module>atomic</module>
         <module>system-clock</module>
         <module>report-by-ex</module>
+        <module>easy-captcha</module>
     </modules>
     <build>
         <plugins>

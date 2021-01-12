@@ -14,11 +14,7 @@ import java.util.concurrent.TimeUnit;
  * @since 1.0
  */
 @State(Scope.Benchmark)
-@Fork(value = 1,
-        jvmArgsAppend = {"-server", "-Xms4g", "-Xmx4g", "-Xmn1536m", "-XX:CMSInitiatingOccupancyFraction=82", "-Xss256k",
-                "-XX:+DisableExplicitGC", "-XX:+UseConcMarkSweepGC", "-XX:+CMSParallelRemarkEnabled",
-                "-XX:LargePageSizeInBytes=128m", "-XX:+UseFastAccessorMethods",
-                "-XX:+UseCMSInitiatingOccupancyOnly", "-XX:+CMSClassUnloadingEnabled"})
+@Fork(value = 1, jvmArgsAppend = { "-server", "-Xms2g", "-Xmx2g", "-XX:MetaspaceSize=256m" })
 @BenchmarkMode(Mode.Throughput)
 @Warmup(iterations = 3)
 @Measurement(iterations = 3, time = 5)

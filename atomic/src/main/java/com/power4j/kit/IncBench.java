@@ -31,8 +31,7 @@ import java.util.concurrent.atomic.LongAdder;
  * @since 1.0
  */
 @State(Scope.Benchmark)
-@Fork(value = 1, jvmArgsAppend = { "-server", "-Xms32m", "-Xmx128m", "-Xmn64m", "-XX:CMSInitiatingOccupancyFraction=82",
-		"-Xss256k", "-XX:LargePageSizeInBytes=64m" })
+@Fork(value = 1,jvmArgsAppend = { "-server", "-Xms2g", "-Xmx2g", "-XX:MetaspaceSize=256m" })
 @BenchmarkMode(Mode.Throughput)
 @Warmup(iterations = 1, time = 3)
 @Measurement(iterations = 3, time = 5)
