@@ -14,7 +14,7 @@
         <!-- Name of the benchmark Uber-JAR to generate -->
         <uberjar.name>benchmarks</uberjar.name>
         <jmh.version>1.23</jmh.version>
-        <hutool.version>5.3.5</hutool.version>
+        <hutool.version>5.8.21</hutool.version>
     </properties>
 
     <dependencies>
